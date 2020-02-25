@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Frezzo"
+    }
+  },
+  "defaultProject": "Frezzo",
+  "cli": {
+    "analytics": "7b11158a-8b45-4028-ba65-c86cc2e0ba71"
+  }
 }
