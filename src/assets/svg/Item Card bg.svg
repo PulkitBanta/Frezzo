@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="393.158" height="399" style=""><rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none"/>
+  <defs>
+    <filter id="Background_Vector" x="0" y="0" width="393.1579895019531" height="399" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.349"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  
+<g class="currentLayer" style=""><title>Layer 1</title><g filter="url(#Background_Vector)" id="svg_1" class="">
+    <path id="Background_Vector-2" data-name="Background Vector" d="M374.2288818359375,-1.8014187216758728 s-147.1999969482422,23.66699981689453 -190.1739959716797,192.3520050048828 S-0.9290783405303955,379.19859516620636 -0.9290783405303955,379.19859516620636 V-1.8014187216758728 z" fill="#ff8b39"/>
+  </g></g></svg>

@@ -1,0 +1,12 @@
+.main-card {
+    color: white;
+    height: 40vh;
+    width: 60vw;
+    background-color: white;
+}
+
+.item-image {
+    background-image: url("../../assets/svg/Food Image.svg");
+    height: 20vh;
+    width: 60vw;
+}

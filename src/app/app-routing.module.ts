@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, Router } from '@angular/router';
-import { InputComponent } from './input-field/test.component'
+import { InputComponent } from './input-field/test.component';
+import { MenuComponent } from './menu/menu.component'
 
 const routes: Routes = [
-    { path: '', component: InputComponent }
+    { path: '', component: MenuComponent }
 ];
 
 @NgModule({

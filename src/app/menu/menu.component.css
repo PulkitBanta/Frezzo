@@ -1,0 +1,18 @@
+.base {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../../assets/svg/Item Card bg.svg");
+    background-color: #434B53;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+
+.text {
+    text-shadow: 0vw 3px #0000001c;
+    padding-top: 15vh;
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="299.581" height="435.389" viewBox="0 0 299.581 435.389">
+  <defs>
+    <filter id="vector_bottom_2" x="0" y="0" width="298.605" height="338.252" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.58"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Vector_top_2" x="78.581" y="0" width="221" height="435.389" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.58"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Vector_Top_Right" data-name="Vector Top Right" transform="translate(-84.919 5.5)">
+    <g transform="matrix(1, 0, 0, 1, 84.92, -5.5)" filter="url(#vector_bottom_2)">
+      <path id="vector_bottom_2-2" data-name="vector bottom 2" d="M582.178,4.5s-68.317,147.975,84.159,168.767S847.525,324.752,847.525,324.752V4.5Z" transform="translate(-557.92 1.5)" fill="#ff6738"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 84.92, -5.5)" filter="url(#Vector_top_2)">
+      <path id="Vector_top_2-2" data-name="Vector top 2" d="M0,0C36.876,69.92,186.183,45,147.5,279.678S203,378,203,378V0Z" transform="translate(87.58 6)" fill="#ff8b39"/>
+    </g>
+  </g>
+</svg>
