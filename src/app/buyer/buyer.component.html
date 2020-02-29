@@ -1,11 +1,11 @@
-<form class="menu-form" (ngSubmit)="onSubmit(menuForm.value)" [formGroup]="menuForm">
-    <div class="form-group">
-        <label for="name">Item Name</label>
-        <input id="name" class="form-control" type="text" formControlName="name">
+<h2 class="center">Menu </h2>
+<div class="card bg-light text-dark" *ngFor="let item of menuItems">
+    <div class="card-body center">
+        <h4 class="card-title">{{ item.name }} </h4>
+        <p class="card-text">Price: ₹{{ item.price }} </p>
     </div>
-    <div class="form-group">
-        <label for="price">Item Price</label>
-        <input id="price" class="form-control" type="number" formControlName="price">
-    </div>
-    <button class="btn btn-success" type="submit">Submit</button>
-</form>
+</div>
+
+<div class="center">
+    <button class="btn btn-light" routerLink="../seller">Seller</button>
+</div>

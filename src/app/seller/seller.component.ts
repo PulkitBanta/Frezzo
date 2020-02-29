@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { MenuService } from '../menu.service';
 
 @Component({
   selector: 'app-seller',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SellerComponent implements OnInit {
 
-  constructor() { }
+  menuForm;
+  constructor(
+    private formBuilder: FormBuilder,
+    private menuService: MenuService
+    ) { }
 
   ngOnInit() {
+    this.menuForm = this.formBuilder.group({
+      name: "",
+      price: ""
+    })
   }
 
+  onSubmit(menuData) {
+    alert("Your product has been submitted")
+    console.log("Product Added")
+    console.log(menuData);
+    this.menuService.addToMenu(menuData);
+
+    this.menuForm.reset();
+  }
 }

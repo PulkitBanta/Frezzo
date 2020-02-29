@@ -1,1 +1,14 @@
-<p>seller works!</p>
+<form class="center" (ngSubmit)="onSubmit(menuForm.value)" [formGroup]="menuForm">
+    <div class="form-group">
+        <label for="name">Item Name</label>
+        <input id="name" class="form-control" type="text" formControlName="name">
+    </div>
+    <div class="form-group">
+        <label for="price">Item Price</label>
+        <input id="price" class="form-control" type="number" formControlName="price">
+    </div>
+    <button class="btn btn-success" type="submit">Submit</button>
+</form>
+<div class="center">
+    <button type="button" class="btn btn-light" routerLink="../buyer">Buyer</button>
+</div>

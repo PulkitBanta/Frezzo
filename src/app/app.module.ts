@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { InputComponent } from './input-field/test.component';
 import { MenuCardComponent } from './menu-card/menu-card.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { TopPickMenuComponent } from './top-pick-menu/top-pick-menu.component';
@@ -16,7 +15,6 @@ import { SellerComponent } from './seller/seller.component';
   declarations: [
     AppComponent,
     BuyerComponent,
-    InputComponent,
     MainMenuComponent,
     MenuCardComponent,
     OptionsComponent,

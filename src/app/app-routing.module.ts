@@ -5,7 +5,9 @@ import { SellerComponent } from './seller/seller.component';
 import { BuyerComponent } from './buyer/buyer.component';
 
 const routes: Routes = [
-    { path: '', component: BuyerComponent }
+    { path: '', component: MainMenuComponent },
+    { path: 'buyer', component: BuyerComponent },
+    { path: 'seller', component: SellerComponent }
 ];
 
 @NgModule({
