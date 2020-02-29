@@ -1,11 +1,11 @@
-<form (ngSubmit)="onSubmit(menuForm.value)" [formGroup]="menuForm">
-    <div>
+<form class="menu-form" (ngSubmit)="onSubmit(menuForm.value)" [formGroup]="menuForm">
+    <div class="form-group">
         <label for="name">Item Name</label>
-        <input id="name" type="text" formControlName="name">
+        <input id="name" class="form-control" type="text" formControlName="name">
     </div>
-    <div>
+    <div class="form-group">
         <label for="price">Item Price</label>
-        <input id="price" type="number" formControlName="price">
+        <input id="price" class="form-control" type="number" formControlName="price">
     </div>
-    <button class="button" type="submit">Submit</button>
+    <button class="btn btn-success" type="submit">Submit</button>
 </form>
