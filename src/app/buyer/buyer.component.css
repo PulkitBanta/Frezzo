@@ -1,3 +1,7 @@
 .center {
     text-align: center;
 }
+
+.btn-secondary {
+    border-radius: 50%;
+}

@@ -10,6 +10,7 @@ import { TopPickMenuComponent } from './top-pick-menu/top-pick-menu.component';
 import { OptionsComponent } from './options/options.component';
 import { BuyerComponent } from './buyer/buyer.component';
 import { SellerComponent } from './seller/seller.component';
+import { OrderListComponent } from './order-list/order-list.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SellerComponent } from './seller/seller.component';
     MenuCardComponent,
     OptionsComponent,
     TopPickMenuComponent,
-    SellerComponent
+    SellerComponent,
+    OrderListComponent
   ],
   imports: [
     BrowserModule,

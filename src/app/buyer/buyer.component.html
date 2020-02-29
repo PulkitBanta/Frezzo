@@ -3,9 +3,11 @@
     <div class="card-body center">
         <h4 class="card-title">{{ item.name }} </h4>
         <p class="card-text">Price: ₹{{ item.price }} </p>
+        <button (click)="addToCart(item)" class="btn btn-secondary">+</button>
     </div>
 </div>
 
 <div class="center">
     <button class="btn btn-light" routerLink="../seller">Seller</button>
+    <button class="btn btn-light" routerLink="../orderList">cart</button>
 </div>

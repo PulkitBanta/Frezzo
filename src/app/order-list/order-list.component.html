@@ -1,0 +1,13 @@
+<h2 class="center">Ordered Items</h2>
+<div class="card bg-light text-dark" *ngFor="let item of orderItems">
+    <div class="card-body center">
+        <h4 class="card-title">{{ item.name }} </h4>
+        <p class="card-text">Price: ₹{{ item.price }} </p>
+    </div>
+</div>
+<!-- <div *ngIf="price > 0">
+    <h3>Total Amount: {{ totalPrice }}</h3>
+</div> -->
+<div class="center">
+    <button class="btn btn-light" routerLink="../buyer">Buyer</button>
+</div>
