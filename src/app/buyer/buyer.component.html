@@ -1,4 +1,4 @@
-<h2 class="center">Menu </h2>
+<p class="center head-text">Menu </p>
 <div class="card bg-light text-dark" *ngFor="let item of menuItems">
     <div class="card-body center">
         <h4 class="card-title">{{ item.name }} </h4>
@@ -7,7 +7,6 @@
     </div>
 </div>
 
-<div class="center">
-    <button class="btn btn-light" routerLink="../seller">Seller</button>
-    <button class="btn btn-light" routerLink="../orderList">cart</button>
+<div class="page-center size" *ngIf="menuItems.length == 0">
+    <p>Seller do not have any product listed</p>
 </div>

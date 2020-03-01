@@ -5,3 +5,18 @@
 .btn-secondary {
     border-radius: 50%;
 }
+
+.page-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.size {
+    height: 50vh;
+}
+
+.head-text {
+    margin-top: 2vh;
+}
