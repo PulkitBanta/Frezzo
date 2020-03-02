@@ -8,8 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class TopPickMenuComponent implements OnInit {
 
   constructor() { }
+  items = [];
+
+  card = {
+    name : 'Pizza',
+    price: '120',
+    src: '../../assets/fast food.jpg'
+  }
 
   ngOnInit() {
+    this.items.push(this.card);
+    this.items.push(this.card);
+    this.items.push(this.card);
+    this.items.push(this.card);
+    // console.log(this.items)
   }
 
 }

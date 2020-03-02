@@ -1,10 +1,9 @@
-<div>
-    <div class="card">
-        <div class="card-image"></div>
-        <p class="item-data">Title: Something</p>
-        <p class="item-data">Price: ₹100</p>
-        <div>
-            <button class="addToMenu btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+<div class="row d-flex justify-content-around">
+    <div class="card" *ngFor="let item of items">
+        <img src="../../assets/fast food.jpg" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">{{ item.name }}</h5>
+            <p class="card-text">Price: ₹{{ item.price }}</p>
         </div>
     </div>
 </div>

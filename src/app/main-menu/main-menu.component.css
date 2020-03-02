@@ -1,35 +1,15 @@
 .base {
-    height: 100vh;
-    width: 100vw;
     background-color: white;
     background-repeat: no-repeat;
 }
 
-.text {
-    /* text-shadow: 0vw 3px #00000046; */
-    padding-top: 10vh;
-    margin: 0;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    font-size: 2em;
-    font-weight: bold;
-}
-
-
-/* .btn {
-    box-shadow: 0 2px rgba(53, 52, 52, 0.562);
-} */
-
 .categories {
     margin-top: 5vh;
     display: flex;
-    /* flex-flow: row wrap; */
     text-align: center;
     justify-content: space-around;
 }
 
-.menu-grid {
-    margin-top: 5vh;
-    display: flex;
-    justify-content: space-around;
+.today-menu {
+    margin: 5vh auto;
 }
