@@ -1,12 +1,14 @@
-<p class="center head-text">Menu </p>
-<div class="card bg-light text-dark" *ngFor="let item of menuItems">
-    <div class="card-body center">
-        <h4 class="card-title">{{ item.name }} </h4>
-        <p class="card-text">Price: ₹{{ item.price }} </p>
-        <button (click)="addToCart(item)" class="btn btn-secondary">+</button>
+<div class="all-menu">
+    <p class="center head-text">Menu </p>
+    <div class="card bg-light text-dark" *ngFor="let item of menuItems">
+        <div class="card-body center">
+            <h4 class="card-title">{{ item.name }} </h4>
+            <p class="card-text">Price: ₹{{ item.price }} </p>
+            <button (click)="addToCart(item)" class="btn btn-secondary">+</button>
+        </div>
     </div>
-</div>
 
-<div class="page-center size" *ngIf="menuItems.length == 0">
-    <p>Seller do not have any product listed</p>
+    <div class="page-center size" *ngIf="menuItems.length == 0">
+        <p>Seller do not have any product listed</p>
+    </div>
 </div>
