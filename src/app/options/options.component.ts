@@ -10,6 +10,7 @@ export class OptionsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-top-pick-menu',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopPickMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private cartService: CartService
+  ) { }
   items = [];
 
   card = {
@@ -22,6 +25,10 @@ export class TopPickMenuComponent implements OnInit {
     this.items.push(this.card);
     this.items.push(this.card);
     // console.log(this.items)
+  }
+
+  addToCart(item) {
+    this.cartService.addToCart(item);
   }
 
 }

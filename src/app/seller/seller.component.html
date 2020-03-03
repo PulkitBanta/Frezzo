@@ -1,15 +1,25 @@
-<p class="center head-text">Add product</p>
+<h5 class="center head-text">Add product</h5>
+<br><br>
 
 <div class="container">
-    <form class="center" (ngSubmit)="onSubmit(menuForm.value)" [formGroup]="menuForm">
-        <div class="form-group">
-            <label for="name">Item Name</label>
-            <input id="name" class="form-control" type="text" formControlName="name">
-        </div>
-        <div class="form-group">
-            <label for="price">Item Price</label>
-            <input id="price" class="form-control" type="number" formControlName="price">
-        </div>
-        <button class="btn btn-success" type="submit">Submit</button>
-    </form>
+    <div class="row">
+        <form class="col s12" (ngSubmit)="onSubmit(menuForm.value)" [formGroup]="menuForm">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="first_name" type="text" class="validate" formControlName="name">
+                    <label for="first_name">First Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="price" type="number" class="validate" formControlName="price">
+                    <label for="price">Price</label>
+                </div>
+            </div>
+            <br>
+            <div class="row center">
+                <button class="btn waves-effect waves-light" type="submit">Submit<i class="material-icons right">send</i></button>
+            </div>
+        </form>
+    </div>
 </div>
