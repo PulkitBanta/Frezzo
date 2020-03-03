@@ -23,7 +23,6 @@ export class SellerComponent implements OnInit {
   }
 
   onSubmit(menuData) {
-    alert("Your product has been submitted");
     this.menuService.addToMenu(menuData);
 
     // reseting the form

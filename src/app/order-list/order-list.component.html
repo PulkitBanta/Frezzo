@@ -1,15 +1,20 @@
-<div class="all-menu">
-    <p class="center head-text">Ordered Items</p>
-    <div class="card bg-light text-dark" *ngFor="let item of orderItems">
-        <div class="card-body center">
-            <h4 class="card-title">{{ item.name }} </h4>
-            <p class="card-text">Price: ₹{{ item.price }} </p>
+<div class="container">
+    <div class="row center">
+        <div class="col s12 m4" *ngFor="let item of orderItems">
+            <div class="card">
+                <div class="card-image">
+                    <img src="../../assets/fast food.jpg">
+                </div>
+                <div class="card-content">
+                    <span class="card-title">{{ item.name }}</span>
+                    <p>Price: ₹{{ item.price }}</p>
+                </div>
+            </div>
         </div>
-    </div>
-    <!-- <div *ngIf="price > 0">
-        <h3>Total Amount: {{ totalPrice }}</h3>
-    </div> -->
-    <div class="page-center size" *ngIf="orderItems.length == 0">
-        <p>Your cart feels too light</p>
+
+        <div class="col s12 m12 page-center" *ngIf="orderItems.length == 0">
+            <i class="material-icons large">hourglass_empty</i>
+            <h5>Your cart feels too light</h5>
+        </div>
     </div>
 </div>
