@@ -9,17 +9,23 @@ export class MenuService {
     private firestore: AngularFirestore
   ) { }
 
-  
-  addToFirebase(data) {
+  addToMenu(data) {
     return new Promise<any>((resolve, reject) =>{
       this.firestore
       .collection("menu")
       .add(data)
-      .then(res => {console.log("Item Added to firebase")}, err => {reject(err); console.log("error occured")});
+      .then(res => {console.log("Success!")}, err => {reject(err); console.log("Error occured / Not Added")});
     });
   }
   
   getMenu() {
     return this.firestore.collection("menu").snapshotChanges();
+  }
+
+  updateMenu(data) {
+    return this.firestore
+          .collection("menu")
+          .doc(data.payload.doc.id)
+          .set({ available: !data.payload.doc.data().available }, {merge: true})
   }
 }

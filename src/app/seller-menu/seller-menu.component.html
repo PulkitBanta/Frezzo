@@ -1,1 +1,31 @@
-<p>seller-menu works!</p>
+<div class="container">
+    <div class="row center">
+        <div class="col s12 m4" *ngFor="let item of sellerItems">
+            <div class="card">
+                <div class="card-image">
+                    <img src="../../assets/fast food.jpg">
+                </div>
+                <div class="card-content">
+                    <span class="card-title">{{ item.payload.doc.data().name }}</span>
+                    <p>Price: ₹{{ item.payload.doc.data().price }}</p><br>
+                    <div class="divider"></div>
+                    <div class="switch" (change)="updateMenu(item)">
+                        <h6>Available</h6>
+                        <label>
+                            No
+                            <input [checked]="item.payload.doc.data().available" type="checkbox">
+                            <span class="lever"></span>
+                            Yes
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m12 page-center" *ngIf="sellerItems.length == 0">
+            <i class="material-icons large">hourglass_empty</i>
+            <h5>Add Products First</h5>
+        </div>
+
+    </div>
+</div>

@@ -22,7 +22,7 @@ export class CartService {
       this.firestore
           .collection("cart")
           .add(data)
-          .then(res => {console.log("Item Added to firebase")}, err => {reject(err); console.log("error occured")});
+          .then(res => {console.log("Added To Cart")}, err => {reject(err); console.log("Error occured / Not Added")});
   });
   }
 

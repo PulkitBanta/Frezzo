@@ -18,12 +18,13 @@ export class SellerComponent implements OnInit {
   ngOnInit() {
     this.menuForm = this.formBuilder.group({
       name: "",
-      price: ""
+      price: "",
+      available: "" 
     })
   }
 
   onSubmit(menuData) {
-    this.menuService.addToFirebase(menuData);
+    this.menuService.addToMenu(menuData);
 
     // reseting the form
     this.menuForm.reset();
