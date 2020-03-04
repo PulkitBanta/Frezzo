@@ -6,11 +6,9 @@
         <form class="col s12" (ngSubmit)="onSubmit(menuForm.value)" [formGroup]="menuForm">
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="first_name" type="text" class="validate" formControlName="name">
-                    <label for="first_name">First Name</label>
+                    <input id="name" type="text" class="validate" formControlName="name">
+                    <label for="name">Name</label>
                 </div>
-            </div>
-            <div class="row">
                 <div class="input-field col s12">
                     <input id="price" type="number" class="validate" formControlName="price">
                     <label for="price">Price</label>
