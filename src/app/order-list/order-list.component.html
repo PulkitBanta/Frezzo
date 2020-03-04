@@ -6,13 +6,16 @@
                     <img src="../../assets/fast food.jpg">
                 </div>
                 <div class="card-content">
+                    <a (click)="delete(item)" class="btn-floating halfway-fab waves-effect waves-light red"><i
+                        class="material-icons">delete_forever</i></a>
                     <span class="card-title">{{ item.payload.doc.data().name }}</span>
                     <p>Price: ₹{{ item.payload.doc.data().price }}</p>
                 </div>
             </div>
         </div>
 
-        <div class="col s12 m12 page-center" *ngIf="orderItems.length == 1">
+
+        <div class="col s12 m12 page-center" *ngIf="orderItems.length == 0">
             <i class="material-icons large">hourglass_empty</i>
             <h5>Your cart feels too light</h5>
         </div>

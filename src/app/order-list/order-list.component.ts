@@ -21,4 +21,8 @@ export class OrderListComponent implements OnInit {
     });
   }
 
+  delete(item) {
+    this.cartService.deleteCartOrder(item);
+  }
+
 }

@@ -17,6 +17,7 @@ export class CartService {
       name: name,
       price: price
     }
+
     return new Promise<any>((resolve, reject) =>{
       this.firestore
           .collection("cart")
@@ -27,5 +28,12 @@ export class CartService {
 
   getCartItems() {
     return this.firestore.collection("cart").snapshotChanges();
+  }
+
+  deleteCartOrder(data) {
+    this.firestore
+        .collection("cart")
+        .doc(data.payload.doc.id)
+        .delete();
   }
 }

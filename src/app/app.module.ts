@@ -14,6 +14,8 @@ import { OrderListComponent } from './order-list/order-list.component';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { PaymentComponent } from './payment/payment.component';
+import { SellerMenuComponent } from './seller-menu/seller-menu.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     OptionsComponent,
     TopPickMenuComponent,
     SellerComponent,
-    OrderListComponent
+    OrderListComponent,
+    PaymentComponent,
+    SellerMenuComponent
   ],
   imports: [
     BrowserModule,
