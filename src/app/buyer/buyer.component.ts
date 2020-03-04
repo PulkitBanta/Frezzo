@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../menu.service';
-import { CartService } from '../cart.service'; 
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-buyer',
@@ -9,14 +9,16 @@ import { CartService } from '../cart.service';
 })
 export class BuyerComponent implements OnInit {
 
-  menuItems = [];
+  data = [];
   constructor(
       private menuService: MenuService,
       private cartService: CartService
     ) { }
 
   ngOnInit() {
-    this.menuItems = this.menuService.getMenu();
+    this.menuService.getMenu().subscribe(res => {
+      this.data = res;
+    });
   }
 
   addToCart(item) {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { CartService } from '../cart.service';
 
 @Component({
@@ -9,26 +10,33 @@ import { CartService } from '../cart.service';
 export class TopPickMenuComponent implements OnInit {
 
   constructor(
-    private cartService: CartService
+    private cartService: CartService,
+    private firestore: AngularFirestore
   ) { }
+
   items = [];
 
-  card = {
-    name : 'Pizza',
-    price: '120',
-    src: '../../assets/fast food.jpg'
-  }
-
   ngOnInit() {
-    this.items.push(this.card);
-    this.items.push(this.card);
-    this.items.push(this.card);
-    this.items.push(this.card);
-    // console.log(this.items)
+    this.getTopPickItems().subscribe(res => {
+      this.items = res;
+    });
   }
 
   addToCart(item) {
     this.cartService.addToCart(item);
+  }
+
+  addToTopPick(item) {
+    return new Promise<any>((resolve, reject) =>{
+      this.firestore
+          .collection("top-pick")
+          .add(item)
+          .then(res => {console.log("Item Added to firebase")}, err => {reject(err); console.log("error occured")});
+  });
+  }
+
+  getTopPickItems() {
+    return this.firestore.collection("top-pick").snapshotChanges();
   }
 
 }

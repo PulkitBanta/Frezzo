@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "frezzo-pul5"
+  },
+  "targets": {
+    "frezzo-cdefe": {
+      "hosting": {
+        "Frezzo": [
+          "frezzo-cdefe"
+        ]
+      }
+    }
   }
 }

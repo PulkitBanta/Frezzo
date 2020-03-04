@@ -1,18 +1,18 @@
 <div class="container">
     <div class="row center">
         <div class="col s12 m4" *ngFor="let item of orderItems">
-            <div class="card">
+            <div class="card" *ngIf="item.payload.doc.data().price != 0">
                 <div class="card-image">
                     <img src="../../assets/fast food.jpg">
                 </div>
                 <div class="card-content">
-                    <span class="card-title">{{ item.name }}</span>
-                    <p>Price: ₹{{ item.price }}</p>
+                    <span class="card-title">{{ item.payload.doc.data().name }}</span>
+                    <p>Price: ₹{{ item.payload.doc.data().price }}</p>
                 </div>
             </div>
         </div>
 
-        <div class="col s12 m12 page-center" *ngIf="orderItems.length == 0">
+        <div class="col s12 m12 page-center" *ngIf="orderItems.length == 1">
             <i class="material-icons large">hourglass_empty</i>
             <h5>Your cart feels too light</h5>
         </div>

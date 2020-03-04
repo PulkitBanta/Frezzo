@@ -16,7 +16,9 @@ export class OrderListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.orderItems = this.cartService.getCartItems();
+    this.cartService.getCartItems().subscribe(res => {
+      this.orderItems = res;
+    });
   }
 
 }

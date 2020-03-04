@@ -23,7 +23,7 @@ export class SellerComponent implements OnInit {
   }
 
   onSubmit(menuData) {
-    this.menuService.addToMenu(menuData);
+    this.menuService.addToFirebase(menuData);
 
     // reseting the form
     this.menuForm.reset();
