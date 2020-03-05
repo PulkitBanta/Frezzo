@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { CartService } from '../cart.service';
 
 @Component({
@@ -6,6 +6,8 @@ import { CartService } from '../cart.service';
   templateUrl: './order-list.component.html',
   styleUrls: ['./order-list.component.css']
 })
+
+@Injectable()
 export class OrderListComponent implements OnInit {
 
   orderItems = [];
@@ -22,7 +24,11 @@ export class OrderListComponent implements OnInit {
   }
 
   delete(item) {
-    this.cartService.deleteCartOrder(item);
+    let count = item.payload.doc.data().count;
+    if (count > 1) {
+      this.cartService.deleteCountUpdate(item);
+    } else {
+      this.cartService.deleteCartOrder(item);
+    }
   }
-
 }
