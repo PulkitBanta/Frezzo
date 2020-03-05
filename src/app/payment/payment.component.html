@@ -1,1 +1,28 @@
-<p>payment works!</p>
+<div class="container">
+    <div class="row center">
+        <form class="col s12" (ngSubmit)="clearCart()" [formGroup]="paymentForm">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="firstName" type="text" class="validate" formControlName="firstName">
+                <label for="firstName">First Name</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="lastName" type="text" class="validate" formControlName="lastName">
+                <label for="lastName">Last Name</label>
+            </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">email</i>
+                <input id="email" type="email" class="validate" formControlName="email">
+                <label for="email">Email</label>
+            </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">phone</i>
+                <input id="number" type="number" data-lenght="10" class="validate" formControlName="number">
+                <label for="number">Number</label>
+            </div>
+            <div class="row center">
+                <button class="btn waves-effect waves-light" onclick="M.toast({html: 'Payment Done!'})" type="submit">Submit<i class="material-icons right">send</i></button>
+            </div>
+        </form>
+    </div>
+</div>
