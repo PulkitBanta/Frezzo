@@ -27,20 +27,11 @@ export class BuyerComponent implements OnInit {
   }
 
   addToCart(item) {
-    let count = this.countItems(this.orderItemsList, item);
+    let count = this.cartService.countItems(this.orderItemsList, item);
     if (count >= 0) {
       this.cartService.updateCount(this.orderItemsList[count]);
     } else {
       this.cartService.addToCart(item, 1);
-    }
-  }
-
-  countItems(data, item) {
-    var i = -1;
-    for (i = 0; i < data.length; i++) {
-      if (data[i].payload.doc.data().name == item.payload.doc.data().name) {
-        return i;
-      }
     }
   }
 }

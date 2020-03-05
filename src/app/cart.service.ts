@@ -52,4 +52,13 @@ export class CartService {
           .doc(data.payload.doc.id)
           .set({ count: amount }, {merge: true})
   }
+
+  countItems(data, item) {
+    var i = -1;
+    for (i = 0; i < data.length; i++) {
+      if (data[i].payload.doc.data().name == item.payload.doc.data().name) {
+        return i;
+      }
+    }
+  }
 }

@@ -15,15 +15,25 @@ export class TopPickMenuComponent implements OnInit {
   ) { }
 
   items = [];
+  orderItemsList = []
 
   ngOnInit() {
     this.getTopPickItems().subscribe(res => {
       this.items = res;
     });
+
+    this.cartService.getCartItems().subscribe(res => {
+      this.orderItemsList = res;
+    });
   }
 
   addToCart(item) {
-    this.cartService.addToCart(item);
+    let count = this.cartService.countItems(this.orderItemsList, item);
+    if (count >= 0) {
+      this.cartService.updateCount(this.orderItemsList[count]);
+    } else {
+      this.cartService.addToCart(item, 1);
+    }
   }
 
   addToTopPick(item) {
