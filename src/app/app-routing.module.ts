@@ -6,6 +6,7 @@ import { BuyerComponent } from './buyer/buyer.component';
 import { OrderListComponent } from './order-list/order-list.component';
 import { SellerMenuComponent } from './seller-menu/seller-menu.component';
 import { PaymentComponent } from './payment/payment.component';
+import { SellerOrderToPrepareComponent } from './seller-order-to-prepare/seller-order-to-prepare.component';
 
 const routes: Routes = [
     { path: '', component: MainMenuComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
     { path: 'seller', component: SellerComponent },
     { path: 'orderList', component: OrderListComponent },
     { path: 'sellerMenu', component: SellerMenuComponent },
-    { path: 'payment', component: PaymentComponent }
+    { path: 'payment', component: PaymentComponent },
+    { path: 'toPrepare', component: SellerOrderToPrepareComponent}
 ];
 
 @NgModule({

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { CartService } from '../cart.service';
+import { PrepareOrderService } from '../prepare-order.service';
 
 @Component({
   selector: 'app-payment',
@@ -13,7 +14,8 @@ export class PaymentComponent implements OnInit {
   cartItems
   constructor(
     private formBuilder: FormBuilder,
-    private cartService: CartService
+    private cartService: CartService,
+    private orderPrepare: PrepareOrderService
   ) { }
 
   ngOnInit(): void {
@@ -29,9 +31,10 @@ export class PaymentComponent implements OnInit {
     });
   }
 
-  clearCart() {
-    // clearing the cart
+  prepareOrder() {
+    // order to prepare and clearing the cart
     for (let item of this.cartItems) {
+      this.orderPrepare.toPrepare(item)
       this.cartService.deleteCartOrder(item)
     }
 

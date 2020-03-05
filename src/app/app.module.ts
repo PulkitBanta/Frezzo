@@ -16,6 +16,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { PaymentComponent } from './payment/payment.component';
 import { SellerMenuComponent } from './seller-menu/seller-menu.component';
+import { FooterComponent } from './footer/footer.component';
+import { SellerOrderToPrepareComponent } from './seller-order-to-prepare/seller-order-to-prepare.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { SellerMenuComponent } from './seller-menu/seller-menu.component';
     SellerComponent,
     OrderListComponent,
     PaymentComponent,
-    SellerMenuComponent
+    SellerMenuComponent,
+    FooterComponent,
+    SellerOrderToPrepareComponent
   ],
   imports: [
     BrowserModule,
