@@ -18,6 +18,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { SellerMenuComponent } from './seller-menu/seller-menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { SellerOrderToPrepareComponent } from './seller-order-to-prepare/seller-order-to-prepare.component';
+import { SellerNavbarComponent } from './seller-navbar/seller-navbar.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SellerOrderToPrepareComponent } from './seller-order-to-prepare/seller-
     PaymentComponent,
     SellerMenuComponent,
     FooterComponent,
-    SellerOrderToPrepareComponent
+    SellerOrderToPrepareComponent,
+    SellerNavbarComponent
   ],
   imports: [
     BrowserModule,
