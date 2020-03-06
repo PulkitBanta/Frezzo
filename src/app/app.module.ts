@@ -19,6 +19,7 @@ import { SellerMenuComponent } from './seller-menu/seller-menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { SellerOrderToPrepareComponent } from './seller-order-to-prepare/seller-order-to-prepare.component';
 import { SellerNavbarComponent } from './seller-navbar/seller-navbar.component';
+import { SellerFooterComponent } from './seller-footer/seller-footer.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SellerNavbarComponent } from './seller-navbar/seller-navbar.component';
     SellerMenuComponent,
     FooterComponent,
     SellerOrderToPrepareComponent,
-    SellerNavbarComponent
+    SellerNavbarComponent,
+    SellerFooterComponent
   ],
   imports: [
     BrowserModule,
