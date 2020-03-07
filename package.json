@@ -20,12 +20,12 @@
     "@angular/platform-browser": "~9.1.0-next.1",
     "@angular/platform-browser-dynamic": "~9.1.0-next.1",
     "@angular/router": "~9.1.0-next.1",
+    "firebase": "^7.10.0",
     "jquery": "^3.4.1",
     "materialize-css": "^1.0.0-rc.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2",
-    "firebase": ">= 5.5.7 <8"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.0-next.0",

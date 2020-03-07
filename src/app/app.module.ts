@@ -20,6 +20,11 @@ import { FooterComponent } from './footer/footer.component';
 import { SellerOrderToPrepareComponent } from './seller-order-to-prepare/seller-order-to-prepare.component';
 import { SellerNavbarComponent } from './seller-navbar/seller-navbar.component';
 import { SellerFooterComponent } from './seller-footer/seller-footer.component';
+import { AngularFireMessagingModule } from '@angular/fire/messaging';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AsyncPipe } from '@angular/common';
+import { MessagingService } from './messaging.service';
 
 @NgModule({
   declarations: [
@@ -42,9 +47,15 @@ import { SellerFooterComponent } from './seller-footer/seller-footer.component';
     AppRoutingModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFireMessagingModule
   ],
-  providers: [],
+  providers: [
+    MessagingService,
+    AsyncPipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

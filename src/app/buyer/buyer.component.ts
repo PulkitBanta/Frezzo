@@ -12,11 +12,12 @@ export class BuyerComponent implements OnInit {
   data = [];
   orderItemsList = []
   constructor(
-      private menuService: MenuService,
-      private cartService: CartService,
-    ) { }
+    private menuService: MenuService,
+    private cartService: CartService
+  ) { }
 
   ngOnInit() {
+
     this.menuService.getMenu().subscribe(res => {
       this.data = res;
     });
@@ -24,6 +25,7 @@ export class BuyerComponent implements OnInit {
     this.cartService.getCartItems().subscribe(res => {
       this.orderItemsList = res;
     });
+
   }
 
   addToCart(item) {

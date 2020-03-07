@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessagingService } from '../messaging.service';
 
 @Component({
   selector: 'app-main-menu',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainMenuComponent implements OnInit {
 
-  constructor() { }
+  message;
+  constructor(
+    private messagingService: MessagingService
+  ) { }
 
   ngOnInit() {
+    this.messagingService.requestPermission()
+    this.messagingService.receiveMessage()
+    this.message = this.messagingService.currentMessage
   }
 
 }
