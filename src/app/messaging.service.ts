@@ -4,7 +4,9 @@ import { BehaviorSubject } from 'rxjs'
 @Injectable()
 export class MessagingService {
   currentMessage = new BehaviorSubject(null);
-  constructor(private angularFireMessaging: AngularFireMessaging) {
+  constructor(
+    private angularFireMessaging: AngularFireMessaging
+  ) {
     this.angularFireMessaging.messaging.subscribe(
       (_messaging) => {
         _messaging.onMessage = _messaging.onMessage.bind(_messaging);
@@ -12,21 +14,23 @@ export class MessagingService {
       }
     )
   }
+
   requestPermission() {
     this.angularFireMessaging.requestToken.subscribe(
       (token) => {
-        console.log(token);
+        // console.log(token);
+        console.log("Token recieved")
       },
       (err) => {
         console.error('Unable to get permission to notify.', err);
       }
     );
   }
+
   receiveMessage() {
-    this.angularFireMessaging.messages.subscribe(
-      (payload) => {
-        console.log("new message received. ", payload);
-        this.currentMessage.next(payload);
+    this.angularFireMessaging.messages.subscribe((res) => {
+        console.log("new message received. ", res);
+        this.currentMessage.next(res);
       })
   }
 }

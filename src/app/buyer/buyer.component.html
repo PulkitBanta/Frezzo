@@ -1,15 +1,17 @@
 <app-options></app-options>
 <div class="container">
     <div class="row center">
-        <div class="col s12 m4" *ngFor="let item of data">
-            <div class="card" *ngIf="item.payload.doc.data().available">
-                <div class="card-image">
-                    <img src="../../assets/fast food.jpg">
-                    <a (click)="addToCart(item)" onclick="M.toast({html: 'Added To Cart!'})" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                </div>
-                <div class="card-content">
-                    <span class="card-title">{{ item.payload.doc.data().name }}</span>
-                    <p>Price: ₹{{ item.payload.doc.data().price }}</p>
+        <div *ngFor="let item of data">
+            <div class="col s12 m4" *ngIf="item.payload.doc.data().available">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="../../assets/fast food.jpg">
+                        <a (click)="addToCart(item)" onclick="M.toast({html: 'Added To Cart!'})" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">{{ item.payload.doc.data().name }}</span>
+                        <p>Price: ₹{{ item.payload.doc.data().price }}</p>
+                    </div>
                 </div>
             </div>
         </div>

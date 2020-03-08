@@ -11,9 +11,9 @@ import { SellerOrderToPrepareComponent } from './seller-order-to-prepare/seller-
 const routes: Routes = [
     { path: '', component: MainMenuComponent },
     { path: 'buyer', component: BuyerComponent },
-    { path: 'seller', component: SellerComponent },
+    { path: 'seller', component: SellerMenuComponent },
     { path: 'orderList', component: OrderListComponent },
-    { path: 'sellerMenu', component: SellerMenuComponent },
+    { path: 'addProduct', component: SellerComponent},
     { path: 'payment', component: PaymentComponent },
     { path: 'toPrepare', component: SellerOrderToPrepareComponent}
 ];
