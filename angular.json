@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "frezzo": {
+        "Frezzo": {
             "projectType": "application",
             "schematics": {},
             "root": "",
@@ -13,7 +13,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/frezzo",
+                        "outputPath": "dist/Frezzo",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -30,8 +30,8 @@
                             "node_modules/materialize-css/dist/css/materialize.css"
                         ],
                         "scripts": [
-                            "node_modules/jquery/dist/jquery.js",
-                            "node_modules/materialize-css/dist/js/materialize.js"
+                            "node_modules/jquery/dist/jquery.min.js",
+                            "node_modules/materialize-css/dist/js/materialize.min.js"
                         ]
                     },
                     "configurations": {

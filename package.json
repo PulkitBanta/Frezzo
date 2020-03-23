@@ -23,7 +23,7 @@
         "@types/jquery": "^3.3.33",
         "firebase": "^7.6.0",
         "jquery": "^3.4.1",
-        "materialize-css": "^1.0.0-rc.2",
+        "materialize-css": "^0.100.2",
         "rxjs": "~6.5.4",
         "tslib": "^1.10.0",
         "zone.js": "~0.10.2"
