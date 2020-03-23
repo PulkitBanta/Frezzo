@@ -29,22 +29,22 @@ export class SellerOrderToPrepareComponent implements OnInit {
   }
 
   showNotification() {
-    $.ajax({
-      type: 'POST',
-      url: "https://fcm.googleapis.com/fcm/send",
-      headers: {
-        Authorization: 'key=' + 'AAAAttGmCPo:APA91bF81lvIja0ZvMY1kk_gsCKy7na39Z4rcOqgV729yNYebFfzmNpsD4-wLd8iwf-RrKC5OyqDFxKaGArbZcFA_hN2GgNofquE18dVXgD4LL3gkxKLrcTWHBYAhOD5Cjywv6sQWhkY'
-      },
-      contentType: 'application/json',
-      dataType: 'json',
-      data: JSON.stringify({ "to": this.key, "notification": { "title": "Success", "body": "Your Order has been Prepared" } }),
-      success: function (response) {
-        console.log(response);
-      },
-      error: function (xhr, status, error) {
-        console.log(xhr.error);
-      }
-    });
+    // $.ajax({
+    //   type: 'POST',
+    //   url: "https://fcm.googleapis.com/fcm/send",
+    //   headers: {
+    //     Authorization: 'key=' + 'AAAAttGmCPo:APA91bF81lvIja0ZvMY1kk_gsCKy7na39Z4rcOqgV729yNYebFfzmNpsD4-wLd8iwf-RrKC5OyqDFxKaGArbZcFA_hN2GgNofquE18dVXgD4LL3gkxKLrcTWHBYAhOD5Cjywv6sQWhkY'
+    //   },
+    //   contentType: 'application/json',
+    //   dataType: 'json',
+    //   data: JSON.stringify({ "to": this.key, "notification": { "title": "Success", "body": "Your Order has been Prepared" } }),
+    //   success: function (response) {
+    //     console.log(response);
+    //   },
+    //   error: function (xhr, status, error) {
+    //     console.log(error);
+    //   }
+    // });
   }
 
 }
