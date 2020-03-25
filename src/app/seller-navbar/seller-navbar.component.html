@@ -1,6 +1,6 @@
 <nav class="red darken-1 lighten-1">
     <div class="nav-wrapper">
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a (click)="changeBool()" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="left hide-on-med-and-down">
             <li><a routerLink="../seller"><i class="material-icons left">home</i> Home</a></li>
         </ul>
@@ -12,10 +12,10 @@
     </div>
 </nav>
 
-<ul class="sidenav" id="mobile-demo">
+<ul class="sidenav" id="mobile-demo" [ngClass]="{'sideNavShow':bool}">
     <li><a routerLink="../sellerMenu"><i class="material-icons left">home</i> Home</a></li>
     <li><a routerLink="../addProduct"><i class="material-icons left">add_box</i>Add Product</a></li>
-    <li><a routerLink="../orderList"><i class="material-icons left">shopping_cart</i>Order to Prepare</a></li>
+    <li><a routerLink="../toPrepare"><i class="material-icons left">shopping_cart</i>Order to Prepare</a></li>
     <li>
         <div class="divider"></div>
     </li>
@@ -28,3 +28,4 @@
     </li>
     <li><a><i class="material-icons left">supervisor_account</i>Contact Us</a></li>
 </ul>
+<div class="sidenav-overlay" [ngClass]="{'sidenav-overlay-active':bool}" (click)="changeBool()"></div>

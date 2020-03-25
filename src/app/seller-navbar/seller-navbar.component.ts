@@ -9,6 +9,12 @@ export class SellerNavbarComponent implements OnInit {
 
   constructor() { }
 
+  bool = false
+
+  changeBool() {
+    this.bool = !(this.bool)
+  }
+
   ngOnInit(): void {
   }
 
