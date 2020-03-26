@@ -25,6 +25,7 @@ import { SellerOrderToPrepareComponent } from './seller-order-to-prepare/seller-
 import { SellerNavbarComponent } from './seller-navbar/seller-navbar.component';
 import { SellerFooterComponent } from './seller-footer/seller-footer.component';
 import { MessagingService } from './messaging.service';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { MessagingService } from './messaging.service';
     FooterComponent,
     SellerOrderToPrepareComponent,
     SellerNavbarComponent,
-    SellerFooterComponent
+    SellerFooterComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,10 @@
-.brand-logo {
+.brand-logo>span,
+.brand-logo>img {
     margin-left: .5rem;
+}
+
+.responsive-image {
+    width: 1em;
 }
 
 .sidenav {

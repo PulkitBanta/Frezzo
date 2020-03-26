@@ -1,0 +1,33 @@
+.vertical {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.light {
+    font-weight: 600;
+    color: #777;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.error-text {
+    background: url("https://www.google.com/images/errors/robot.png") 100% 5px no-repeat;
+    padding: 4em;
+    width: 60%;
+}
+
+@media only screen and (max-width: 899px) {
+    .error-text {
+        background: none;
+        width: 100%;
+        padding: 5em 1em;
+    }
+    .vertical {
+        display: block;
+    }
+}
