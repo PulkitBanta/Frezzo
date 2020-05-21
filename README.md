@@ -1,7 +1,42 @@
 # Frezzo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
+Frezzo is online food ordering and delivery platform.
 
-## Development server
+## Project setup
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+npm install
+```
+
+### For development server
+
+```
+ng serve -o
+```
+
+## Features
+
+- Material design
+- Push notifications
+- Client side state management
+- Responsive design
+
+## Screenshots
+
+![Home](screenshots/mocks/Home.png "Landing page")
+![Menu](screenshots/mocks/Menu.png "Menu page")
+![Payment](screenshots/mocks/Payment.png "Payments page")
+
+## Built With
+
+- [Angular](https://angular.io/) - One framework. Mobile & desktop.
+- [Materialize](https://materializecss.com/) - A modern responsive front-end framework based on Material Design
+- [Firebase](https://firebase.google.com/) - Firebase helps mobile and web app teams succeed
+
+## Contributing
+
+Currently not accepting any contributions.
+
+## Authors
+
+- **Pulkit Banta** - _Initial work_ - [PulkitBanta](https://github.com/PulkitBanta/)
