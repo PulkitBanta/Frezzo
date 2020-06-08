@@ -2,16 +2,34 @@
 
 Frezzo is online food ordering and delivery platform.
 
-## Project setup
+## Getting Started 🚀
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+You'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer.
 
 ```
-npm install
+node@v10.16.0 or higher
+npm@6.9.0 or higher
+git@2.17.1 or higher
 ```
 
-### For development server
+## How To Use 🔧
 
-```
-ng serve -o
+From your command line, clone and run Frezzo:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/PulkitBanta/Frezzo.git
+
+# Go into the repository
+$ cd Frezzo
+
+# Install dependencies
+$ npm install
+
+#Start's development server
+$ npm start
 ```
 
 ## Features
@@ -37,6 +55,11 @@ ng serve -o
 
 Currently not accepting any contributions.
 
-## Authors
+## Contributors
+| [![Pulkit Banta](https://github.com/PulkitBanta.png?size=100)](https://github.com/PulkitBanta) | [![Shubham Goel](https://github.com/shubhamgoel2525.png?size=100)](https://github.com/shubhamgoel2525) |
+| --- | --- |
+| [Pulkit Banta](https://github.com/PulkitBanta) | [Shubham Goel](https://github.com/shubhamgoel2525) |
 
-- **Pulkit Banta** - _Initial work_ - [PulkitBanta](https://github.com/PulkitBanta/)
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
